@@ -1,0 +1,8 @@
+services:
+    tas2580.hidebots.listener:
+        class: tas2580\hidebots\event\listener
+        arguments:
+            - @config
+            - @user
+        tags:
+            - { name: event.listener }
