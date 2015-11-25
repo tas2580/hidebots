@@ -63,7 +63,7 @@ class listener implements EventSubscriberInterface
 			{
 				unset($online_users['online_users'][$row['user_id']]);
 				unset($user_online_link[$row['user_id']]);
-				$online_users['total_online']--;
+				$online_users['guests_online']++;
 				$online_users['visible_online']--;
 			}
 		}
