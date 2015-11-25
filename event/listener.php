@@ -59,7 +59,7 @@ class listener implements EventSubscriberInterface
 		$user_online_link = $event['user_online_link'];
 		foreach ($event['rowset'] as $row)
 		{
-			if($row['user_type'] === 2)
+			if($row['user_type'] == USER_IGNORE)
 			{
 				unset($online_users['online_users'][$row['user_id']]);
 				unset($user_online_link[$row['user_id']]);
